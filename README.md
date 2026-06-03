@@ -11,7 +11,7 @@ The site visualizes the paper's complete taxonomy, benchmarks, frameworks, and f
 
 ## 🌐 Live Site
 
-**[shanmukh.github.io/ai_agents_memory](https://shanmukh.github.io/ai_agents_memory)**
+**[shanmukh05.github.io/ai_agents_memory/](https://shanmukh05.github.io/ai_agents_memory/)**
 
 ---
 
