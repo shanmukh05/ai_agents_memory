@@ -1,26 +1,215 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+/* Reset & Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Color Tokens - Japandi Minimalist theme */
+  --bg-base: #f7f4ee; /* Warm sand/cream background */
+  --bg-surface: #ffffff; /* Crisp paper white */
+  --bg-surface-elevated: #eae4d7; /* Deeper linen background */
+  --bg-glass: rgba(255, 255, 255, 0.8);
+  --border-color: rgba(45, 50, 47, 0.08); /* Minimal soft gray-charcoal border */
+  --border-glow: rgba(89, 111, 96, 0.12);
+  
+  --text-primary: #2d322f; /* Wabi-sabi charcoal (gentle dark text) */
+  --text-secondary: #5a625e; /* Earthy charcoal-green (secondary text) */
+  --text-muted: #8d9490; /* Soft warm gray-sand */
+  
+  --accent-cyan: #596f60; /* Sage Green */
+  --accent-blue: #4f5e6b; /* Slate Blue */
+  --accent-purple: #b05c43; /* Earthy Terracotta Clay */
+  --accent-pink: #cca16e; /* Warm Ochre Gold */
+  
+  --gradient-tech: linear-gradient(135deg, #596f60 0%, #435449 100%); /* Calm sage gradient */
+  --gradient-glow: linear-gradient(135deg, #b05c43 0%, #cca16e 100%); /* Terracotta-ochre gradient */
+  --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.7) 100%);
+  
+  --font-main: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-mono: 'Fira Code', 'Courier New', Courier, monospace;
+  
+  --shadow-sm: 0 2px 8px rgba(45, 50, 47, 0.02);
+  --shadow-md: 0 8px 30px rgba(45, 50, 47, 0.05);
+  --shadow-lg: 0 16px 48px rgba(45, 50, 47, 0.08);
+  --shadow-glow: 0 4px 20px rgba(89, 111, 96, 0.15);
+  
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+  
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --transition-slow: 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-base);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-surface-elevated);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-cyan);
+}
+
+/* Glassmorphism Class Utilities - Styled as Organic Washi Paper */
+.glass-panel {
+  background: var(--bg-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.glass-panel-hover:hover {
+  border-color: rgba(89, 111, 96, 0.25);
+  box-shadow: 0 12px 40px rgba(45, 50, 47, 0.08);
+  transform: translateY(-2px);
+  transition: transform var(--transition-normal), border-color var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.gradient-text {
+  background: var(--gradient-tech);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+/* Animation utilities */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.6;
+    box-shadow: 0 0 15px rgba(89, 111, 96, 0.08);
+  }
+  50% {
+    opacity: 0.9;
+    box-shadow: 0 0 30px rgba(89, 111, 96, 0.2);
+  }
+}
+
+/* Base Layout Containers */
+.container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Mathematical Equation Container */
+.equation-box {
+  padding: 16px 20px;
+  background: rgba(45, 50, 47, 0.03);
+  border-left: 3px solid var(--accent-cyan);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-family: var(--font-mono);
+  overflow-x: auto;
+  color: var(--accent-cyan);
+  margin: 16px 0;
+  font-size: 1.05rem;
+}
+
+/* MathJax/LaTeX styles */
+.katex-display {
+  margin: 0 !important;
+  padding: 8px 0;
+}
+
+/* Badge styles */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.725rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: rgba(45, 50, 47, 0.04);
+  border: 1px solid rgba(45, 50, 47, 0.06);
+  color: var(--text-secondary);
+}
+
+.badge-cyan {
+  background: rgba(89, 111, 96, 0.08);
+  border-color: rgba(89, 111, 96, 0.2);
+  color: var(--accent-cyan);
+}
+
+.badge-purple {
+  background: rgba(176, 92, 67, 0.08);
+  border-color: rgba(176, 92, 67, 0.2);
+  color: var(--accent-purple);
+}
+
+.badge-pink {
+  background: rgba(204, 161, 110, 0.08);
+  border-color: rgba(204, 161, 110, 0.2);
+  color: var(--accent-pink);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: var(--radius-full); /* Clean round buttons */
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.btn-primary {
+  background: var(--gradient-tech);
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 4px 12px rgba(89, 111, 96, 0.15);
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(89, 111, 96, 0.25);
+  background: linear-gradient(135deg, #4d6053 0%, #39483e 100%);
+}
+
+.btn-secondary {
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 6px rgba(45, 50, 47, 0.02);
+}
+
+.btn-secondary:hover {
+  background: var(--bg-surface-elevated);
+  border-color: rgba(45, 50, 47, 0.15);
+  transform: translateY(-1px);
 }

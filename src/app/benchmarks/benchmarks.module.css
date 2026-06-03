@@ -1,0 +1,235 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 24px 90px;
+  width: 100%;
+}
+
+.header {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.tab {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  padding: 10px 22px;
+  border-radius: var(--radius-full); /* Round pills */
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.875rem;
+  transition: all var(--transition-normal);
+  font-family: var(--font-main);
+}
+
+.tab:hover {
+  background: var(--bg-surface-elevated);
+  color: var(--text-primary);
+  border-color: rgba(45, 50, 47, 0.15);
+}
+
+.activeTab {
+  background: rgba(89, 111, 96, 0.08) !important;
+  border-color: var(--accent-cyan) !important;
+  color: var(--accent-cyan) !important;
+  box-shadow: 0 2px 8px rgba(89, 111, 96, 0.05);
+}
+
+.filterPanel {
+  padding: 20px 24px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.searchBox {
+  flex: 1;
+  min-width: 250px;
+  position: relative;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 10px 16px 10px 40px;
+  background: var(--bg-base);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  outline: none;
+  font-family: var(--font-main);
+  font-size: 0.875rem;
+  transition: all var(--transition-fast);
+}
+
+.searchInput:focus {
+  border-color: var(--accent-cyan);
+  background: var(--bg-surface);
+  box-shadow: 0 0 0 2px rgba(89, 111, 96, 0.1);
+}
+
+.searchIcon {
+  position: absolute;
+  left: 14px;
+  top: 13px;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.filterSelect {
+  padding: 10px 16px;
+  background: var(--bg-base);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  outline: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: all var(--transition-fast);
+}
+
+.filterSelect:focus {
+  border-color: var(--accent-cyan);
+  background: var(--bg-surface);
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  background: var(--bg-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.th {
+  background: rgba(45, 50, 47, 0.02);
+  padding: 18px 24px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.tr {
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color var(--transition-fast);
+}
+
+.tr:last-child {
+  border-bottom: none;
+}
+
+.tr:hover {
+  background-color: var(--bg-base);
+}
+
+.td {
+  padding: 18px 24px;
+  vertical-align: middle;
+  color: var(--text-secondary);
+}
+
+.tdName {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.linkBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-base);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.linkBtn:hover {
+  background: var(--accent-cyan);
+  border-color: var(--accent-cyan);
+  color: #ffffff;
+}
+
+.yesNoBadge {
+  display: inline-flex;
+  padding: 4px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.yesBadge {
+  background: rgba(89, 111, 96, 0.1);
+  color: var(--accent-cyan);
+}
+
+.noBadge {
+  background: rgba(45, 50, 47, 0.05);
+  color: var(--text-muted);
+}
+
+.emptyState {
+  padding: 80px 20px;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.emptyIcon {
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+@media (max-width: 900px) {
+  .filterPanel {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px;
+  }
+  .searchBox {
+    min-width: unset;
+  }
+}

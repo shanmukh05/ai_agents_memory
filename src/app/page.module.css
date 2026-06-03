@@ -1,0 +1,306 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 70px);
+  position: relative;
+  overflow: hidden;
+  background-color: var(--bg-base);
+}
+
+.canvasBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.45; /* Softened network background opacity for minimalism */
+  pointer-events: none;
+}
+
+.hero {
+  padding: 100px 24px 70px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.title {
+  font-size: 3.75rem;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin-bottom: 24px;
+  color: var(--text-primary);
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: 36px;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btnGroup {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.statsSection {
+  padding: 48px 24px;
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 70px;
+  box-shadow: var(--shadow-sm);
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 24px;
+}
+
+.statCard {
+  text-align: center;
+}
+
+.statNumber {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: var(--accent-cyan); /* Sage green main statistic indicator */
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+
+.statLabel {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+
+.cardSection {
+  padding: 0 24px 90px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 48px;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.card {
+  padding: 40px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: all var(--transition-normal);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(89, 111, 96, 0.25);
+  box-shadow: var(--shadow-md);
+}
+
+.cardIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: rgba(89, 111, 96, 0.08);
+  color: var(--accent-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+.cardIconPurple {
+  background: rgba(176, 92, 67, 0.08);
+  color: var(--accent-purple);
+}
+
+.cardIconPink {
+  background: rgba(204, 161, 110, 0.08);
+  color: var(--accent-pink);
+}
+
+.cardTitle {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.cardDesc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: 28px;
+  flex: 1;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--accent-cyan);
+  transition: gap var(--transition-fast);
+  text-decoration: none;
+}
+
+.cardFooterPurple {
+  color: var(--accent-purple);
+}
+
+.cardFooterPink {
+  color: var(--accent-pink);
+}
+
+.card:hover .cardFooter {
+  gap: 12px;
+}
+
+.triangleSection {
+  max-width: 1000px;
+  margin: 0 auto 90px;
+  padding: 48px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.triangleVisual {
+  flex-shrink: 0;
+  width: 320px;
+  height: 320px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.triangleContent {
+  flex: 1;
+}
+
+.triangleTitle {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.triangleDesc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin-bottom: 24px;
+}
+
+.trianglePoints {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.trianglePoint {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.pointDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-cyan);
+  margin-top: 8px;
+  flex-shrink: 0;
+  box-shadow: 0 0 6px rgba(89, 111, 96, 0.4);
+}
+
+.pointDotPurple {
+  background: var(--accent-purple);
+  box-shadow: 0 0 6px rgba(176, 92, 67, 0.4);
+}
+
+.pointDotPink {
+  background: var(--accent-pink);
+  box-shadow: 0 0 6px rgba(204, 161, 110, 0.4);
+}
+
+.pointText {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.pointText strong {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+@media (max-width: 992px) {
+  .cardGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .triangleSection {
+    flex-direction: column;
+    text-align: center;
+    padding: 32px;
+    gap: 32px;
+  }
+  .trianglePoints {
+    align-items: center;
+  }
+  .trianglePoint {
+    text-align: left;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.75rem;
+  }
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
