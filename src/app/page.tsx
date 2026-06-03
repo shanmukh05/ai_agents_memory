@@ -14,7 +14,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className="badge badge-cyan" style={{ marginBottom: 16 }}>
-          ACM Survey - Memory for AI Agents
+          Based on the survey paper <a href="#" style={{ textDecoration: 'underline' }}><mark style={{ backgroundColor: 'rgba(0, 255, 255, 0.2)', padding: '2px 4px', borderRadius: '3px' }}>Memory in the Age of AI Agents</mark></a>
         </div>
         <h1 className={styles.title}>
           Memory in the Age of <span className="gradient-text">AI Agents</span>
@@ -22,54 +22,21 @@ export default function Home() {
         <p className={styles.subtitle}>
           An interactive, visual encyclopedia synthesizing the forms, functions, and dynamics of agentic memory systems. Drawing from hundreds of benchmark evaluations and open-source frameworks.
         </p>
-        <div className={styles.btnGroup}>
-          <Link href="/explorer" className="btn btn-primary">
-            <Compass size={18} />
-            <span>Explore Taxonomy</span>
-          </Link>
-          <Link href="/benchmarks" className="btn btn-secondary">
-            <Database size={18} />
-            <span>View Benchmarks</span>
-          </Link>
-        </div>
       </section>
 
-      {/* Statistics Section */}
-      <section className={styles.statsSection}>
-        <div className={styles.statsGrid}>
-          <div className={styles.statCard}>
-            <div className={styles.statNumber}>100+</div>
-            <div className={styles.statLabel}>Citations & Works</div>
-          </div>
-          <div className={styles.statCard}>
-            <div className={styles.statNumber}>3</div>
-            <div className={styles.statLabel}>Memory Forms</div>
-          </div>
-          <div className={styles.statCard}>
-            <div className={styles.statNumber}>3</div>
-            <div className={styles.statLabel}>Core Functions</div>
-          </div>
-          <div className={styles.statCard}>
-            <div className={styles.statNumber}>3</div>
-            <div className={styles.statLabel}>Dynamics Stages</div>
-          </div>
-        </div>
-      </section>
-
-      {/* Interactive Navigation Cards */}
+      {/* Navigation Guide */}
       <section className={styles.cardSection}>
-        <h2 className={styles.sectionTitle}>Main Modules</h2>
         <div className={styles.cardGrid}>
           <div className={`${styles.card} glass-panel`}>
             <div className={styles.cardIcon}>
               <Compass size={24} />
             </div>
-            <h3 className={styles.cardTitle}>Taxonomy Explorer</h3>
+            <h3 className={styles.cardTitle}>Memory</h3>
             <p className={styles.cardDesc}>
-              Navigate the multi-level hierarchy of memory. Explore token-level, parametric, and latent forms, as well as factual, experiential, and working memory roles. Complete with definitions, detail descriptions, and paper links.
+              Deep dive into agent memory systems, covering the core cognitive triangle of Forms, Functions, and Dynamics. Explore detailed explanations, visualizations, and the theoretical foundations from the survey paper.
             </p>
-            <Link href="/explorer" className={styles.cardFooter}>
-              <span>Launch Explorer</span>
+            <Link href="/memory" className={styles.cardFooter}>
+              <span>Explore Memory Concepts</span>
               <span>&rarr;</span>
             </Link>
           </div>
@@ -78,12 +45,54 @@ export default function Home() {
             <div className={`${styles.cardIcon} ${styles.cardIconPink}`}>
               <Database size={24} />
             </div>
-            <h3 className={styles.cardTitle}>Benchmarks & Engines</h3>
+            <h3 className={styles.cardTitle}>Taxonomy</h3>
             <p className={styles.cardDesc}>
-              Search, filter, and compare 30+ benchmarks and 25+ open-source frameworks. Compare factual vs experiential, multimodal, and evaluation environments in a responsive, clean dashboard.
+              Interactive exploration of the memory taxonomy tree. Navigate the hierarchical structure of memory forms, functions, and dynamics with detailed descriptions, paper references, and visual connections between concepts.
+            </p>
+            <Link href="/explorer" className={`${styles.cardFooter} ${styles.cardFooterPink}`}>
+              <span>Explore Taxonomy Tree</span>
+              <span>&rarr;</span>
+            </Link>
+          </div>
+
+          <div className={`${styles.card} glass-panel`}>
+            <div className={styles.cardIcon}>
+              <Compass size={24} />
+            </div>
+            <h3 className={styles.cardTitle}>Frameworks</h3>
+            <p className={styles.cardDesc}>
+              Comprehensive directory of 25+ open-source agent memory frameworks and libraries. Compare implementations, features, and capabilities across different approaches to agentic memory systems.
+            </p>
+            <Link href="/frameworks" className={styles.cardFooter}>
+              <span>Browse Frameworks</span>
+              <span>&rarr;</span>
+            </Link>
+          </div>
+
+          <div className={`${styles.card} glass-panel`}>
+            <div className={styles.cardIcon}>
+              <Database size={24} />
+            </div>
+            <h3 className={styles.cardTitle}>Benchmarks</h3>
+            <p className={styles.cardDesc}>
+              Detailed comparison of 30+ memory benchmarks and evaluation suites. Filter and analyze benchmarks by factual/experiential focus, multimodal capabilities, and evaluation environments.
             </p>
             <Link href="/benchmarks" className={`${styles.cardFooter} ${styles.cardFooterPink}`}>
-              <span>View Database</span>
+              <span>Compare Benchmarks</span>
+              <span>&rarr;</span>
+            </Link>
+          </div>
+
+          <div className={`${styles.card} glass-panel`}>
+            <div className={styles.cardIcon}>
+              <Compass size={24} />
+            </div>
+            <h3 className={styles.cardTitle}>Future</h3>
+            <p className={styles.cardDesc}>
+              Exploration of emerging trends and future directions in agent memory research. Discover cutting-edge approaches, open problems, and potential breakthroughs in the field.
+            </p>
+            <Link href="/future" className={styles.cardFooter}>
+              <span>Explore Future Directions</span>
               <span>&rarr;</span>
             </Link>
           </div>
@@ -110,20 +119,20 @@ export default function Home() {
                   <stop offset="100%" stopColor="var(--bg-surface-elevated)" />
                 </linearGradient>
               </defs>
-              
+
               {/* Outer triangle connection lines */}
               <polygon points="150,40 40,230 260,230" fill="none" stroke="rgba(45, 50, 47, 0.08)" strokeWidth="4" />
               <polygon points="150,40 40,230 260,230" fill="none" stroke="url(#sage-slate)" strokeWidth="2" strokeDasharray="5,5" />
-              
+
               {/* Vertices as clean nodes */}
               <circle cx="150" cy="40" r="16" fill="url(#sage-slate)" />
-              <text x="150" y="44" fill="#ffffff" fontSize="10" fontWeight="800" textAnchor="middle">FORM</text>
-              
+              <text x="150" y="44" fill="#ffffff" fontSize="10" fontWeight="800" textAnchor="middle">FORMS</text>
+
               <circle cx="40" cy="230" r="16" fill="url(#terracotta-ochre)" />
-              <text x="40" y="234" fill="#ffffff" fontSize="10" fontWeight="800" textAnchor="middle">FUNC</text>
-              
+              <text x="40" y="234" fill="#ffffff" fontSize="10" fontWeight="800" textAnchor="middle">FUNCTIONS</text>
+
               <circle cx="260" cy="230" r="16" fill="url(#gold-sand)" />
-              <text x="260" y="234" fill="#ffffff" fontSize="10" fontWeight="800" textAnchor="middle">DYN</text>
+              <text x="260" y="234" fill="#ffffff" fontSize="10" fontWeight="800" textAnchor="middle">DYNAMICS</text>
 
               {/* Central text */}
               <circle cx="150" cy="145" r="45" fill="var(--bg-surface)" stroke="var(--border-color)" strokeWidth="2" />

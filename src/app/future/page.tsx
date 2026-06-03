@@ -123,16 +123,14 @@ export default function FutureFrontiersPage() {
                 <Code size={12} />
                 <span>Architecture Definition</span>
               </div>
-              <pre className={styles.pre}>
-                <code>{frontier.code}</code>
-              </pre>
+              <pre className={styles.pre}><code>{frontier.code}</code></pre>
             </div>
           </div>
         ))}
       </div>
 
       {/* Footer Info Box */}
-      <div className={`${styles.infoBox} glass-panel`}>
+      <div className={styles.infoBox}>
         <h4>Cognitive Architecture Vision</h4>
         <p>
           As language agents execute complex long-horizon tasks, static retrieval systems create bottlenecks in reasoning and memory degradation. Future frameworks will increasingly treat memory not as a static table, but as a continuous, differentiable neural network parameter or latent layer.

@@ -29,10 +29,9 @@
 /* ---- Cards grid ---- */
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 24px;
   margin-bottom: 56px;
-  align-items: start;
 }
 
 .card {
@@ -118,6 +117,12 @@
   line-height: 1.55;
   color: var(--text-secondary);
   white-space: pre;
+  text-align: left;
+}
+
+.pre code {
+  display: block;
+  font-family: inherit;
 }
 
 /* ---- Footer info box ---- */

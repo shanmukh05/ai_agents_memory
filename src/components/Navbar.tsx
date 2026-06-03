@@ -20,7 +20,6 @@ export default function Navbar() {
     <header className={styles.header}>
       <div className={styles.navContainer}>
         <Link href="/" className={styles.logo}>
-          <span className={styles.logoIcon}>🧠</span>
           <span className={styles.logoText}>AgentMemory</span>
         </Link>
         <nav>
