@@ -907,7 +907,7 @@ export const taxonomyData: Record<string, TaxonomyNode> = {
 export const benchmarksData: BenchmarkItem[] = [
   {
     "name": "MemBench",
-    "link": "https://github.com/nuster1128/MemBench",
+    "link": "https://github.com/import-myself/Membench",
     "factual": true,
     "experiential": true,
     "multimodal": false,
@@ -917,7 +917,7 @@ export const benchmarksData: BenchmarkItem[] = [
   },
   {
     "name": "MemoryAgentBench",
-    "link": "https://github.com/zlwangustc/MemoryAgentBench",
+    "link": "https://github.com/HUST-AI-HYZ/MemoryAgentBench",
     "factual": true,
     "experiential": true,
     "multimodal": false,
@@ -1425,7 +1425,7 @@ export const frameworksData: FrameworkItem[] = [
   },
   {
     "name": "MemU",
-    "link": "https://github.com/Qingyuan-Jiang/MemU",
+    "link": "https://github.com/NevaMind-AI/memU",
     "factual": true,
     "experiential": true,
     "multimodal": true,
@@ -1452,7 +1452,7 @@ export const frameworksData: FrameworkItem[] = [
   },
   {
     "name": "ReMe",
-    "link": "https://github.com/leobeeson/ReMe",
+    "link": "https://github.com/agentscope-ai/ReMe",
     "factual": true,
     "experiential": true,
     "multimodal": false,
@@ -1461,7 +1461,7 @@ export const frameworksData: FrameworkItem[] = [
   },
   {
     "name": "AgentMemory",
-    "link": "https://github.com/agentic-system/agent-memory",
+    "link": "https://github.com/rohitg00/agentmemory",
     "factual": true,
     "experiential": true,
     "multimodal": false,
@@ -1470,7 +1470,7 @@ export const frameworksData: FrameworkItem[] = [
   },
   {
     "name": "MineContext",
-    "link": "https://github.com/kolbytn/mindcraft",
+    "link": "https://github.com/volcengine/MineContext",
     "factual": true,
     "experiential": true,
     "multimodal": true,
@@ -1506,7 +1506,7 @@ export const frameworksData: FrameworkItem[] = [
   },
   {
     "name": "HindSight",
-    "link": "https://github.com/HindSight-AI/HindSight",
+    "link": "https://github.com/vectorize-io/hindsight",
     "factual": true,
     "experiential": true,
     "multimodal": false,

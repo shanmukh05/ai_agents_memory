@@ -124,15 +124,15 @@ export default function Home() {
               <polygon points="150,40 40,230 260,230" fill="none" stroke="rgba(45, 50, 47, 0.08)" strokeWidth="4" />
               <polygon points="150,40 40,230 260,230" fill="none" stroke="url(#sage-slate)" strokeWidth="2" strokeDasharray="5,5" />
 
-              {/* Vertices as clean nodes */}
-              <circle cx="150" cy="40" r="16" fill="url(#sage-slate)" />
-              <text x="150" y="44" fill="#ffffff" fontSize="10" fontWeight="800" textAnchor="middle">FORMS</text>
-
-              <circle cx="40" cy="230" r="16" fill="url(#terracotta-ochre)" />
-              <text x="40" y="234" fill="#ffffff" fontSize="10" fontWeight="800" textAnchor="middle">FUNCTIONS</text>
-
-              <circle cx="260" cy="230" r="16" fill="url(#gold-sand)" />
-              <text x="260" y="234" fill="#ffffff" fontSize="10" fontWeight="800" textAnchor="middle">DYNAMICS</text>
+                {/* Vertices as clean nodes */}
+                <circle cx="150" cy="40" r="32" fill="url(#sage-slate)" />
+                <text x="150" y="45" fill="#ffffff" fontSize="10" fontWeight="800" textAnchor="middle">FORMS</text>
+                
+                <circle cx="40" cy="230" r="32" fill="url(#terracotta-ochre)" />
+                <text x="40" y="235" fill="#ffffff" fontSize="10" fontWeight="800" textAnchor="middle">FUNCTIONS</text>
+                
+                <circle cx="260" cy="230" r="32" fill="url(#gold-sand)" />
+                <text x="260" y="235" fill="#ffffff" fontSize="10" fontWeight="800" textAnchor="middle">DYNAMICS</text>
 
               {/* Central text */}
               <circle cx="150" cy="145" r="45" fill="var(--bg-surface)" stroke="var(--border-color)" strokeWidth="2" />

@@ -168,13 +168,13 @@ export default function BenchmarksPage() {
                   <td className={styles.td}>{item.feature}</td>
                   <td className={styles.td}>
                     <a
-                      href={`https://scholar.google.com/scholar?q=${encodeURIComponent(item.name)}`}
+                      href={item.link.startsWith("http") ? item.link : `https://scholar.google.com/scholar?q=${encodeURIComponent(item.name)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className={styles.linkBtn}
                     >
                       <ExternalLink size={12} />
-                      <span>Search</span>
+                      <span>Link</span>
                     </a>
                   </td>
                 </tr>
