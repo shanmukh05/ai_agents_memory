@@ -14,7 +14,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className="badge badge-cyan" style={{ marginBottom: 16 }}>
-          Based on the survey paper <a href="#" style={{ textDecoration: 'underline' }}><mark style={{ backgroundColor: 'rgba(0, 255, 255, 0.2)', padding: '2px 4px', borderRadius: '3px' }}>Memory in the Age of AI Agents</mark></a>
+          Based on the survey paper <a href="https://arxiv.org/abs/2512.13564" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}><mark style={{ backgroundColor: 'rgba(0, 255, 255, 0.2)', padding: '2px 4px', borderRadius: '3px' }}>Memory in the Age of AI Agents</mark></a>
         </div>
         <h1 className={styles.title}>
           Memory in the Age of <span className="gradient-text">AI Agents</span>
